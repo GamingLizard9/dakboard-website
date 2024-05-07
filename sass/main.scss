@@ -1,0 +1,13 @@
+// Define my variables
+$red: #cd2355;
+$gaminglizard9-green: #41bd22;
+
+// Load Bulma's base styles and themes (including the minireset)
+@use "bulma/sass" with (
+    $family-primary: '"Inter", sans-serif',
+    $primary: $red,
+    $success: $gaminglizard9-green
+);
+
+// Get the font
+@import url("https://fonts.googleapis.com/css?family=Inter:400,800");
