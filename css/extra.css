@@ -1,14 +1,27 @@
 .hero-pattern {
-    background-image: url("../images/star-pattern.svg");
+    background-image: url("../images/hero-pattern-2.png");
     background-size: 10%;
-    animation: pan 180s linear infinite
+    animation: pan 180s linear infinite;
 }
 
 @keyframes pan {
     0% {
-      background-position: 0% 0%;
+      background-position: 0px 0px;
     }
     100% {
         background-position: -100% 500%;
     }
+}
+
+.hoverable-navbar-item:hover {
+    background-color: #cd2356;
+}
+
+.button {
+    border: solid 1px white;
+}
+
+.yellow-em {
+    color: #ffbf29;
+    font-weight: bold !important;
 }
