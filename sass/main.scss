@@ -4,6 +4,7 @@ $gaminglizard9-green: #41bd22;
 $dark-gray: #111111;
 $black: #000000;
 $purple: #cc00cc;
+$orange: #ee7700;
 
 // Load Bulma's base styles and themes (including the minireset)
 @use "bulma/sass" with (
@@ -11,6 +12,7 @@ $purple: #cc00cc;
     $primary: $red,
     $danger: $purple,
     $success: $gaminglizard9-green,
+    $info: $orange,
     $box-background-color: $red,
     $notification-radius: 0.75rem
 );

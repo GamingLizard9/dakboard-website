@@ -15,7 +15,7 @@
 
 
 /* Animation for panning text */
-@keyframes animate_text {
+@keyframes animate-text {
     from {
       transform: translate3d(-10%, 0, 0);
     }
@@ -24,16 +24,18 @@
     }
 }
 .scrolling-text {
-    width: 100%;
+    width: 120%;
+    left: -10%
     overflow: hidden;
     display: flex;
     white-space: nowrap;
+    position: 0% 0%
 }
 .text {
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    animation: animate_text 75s linear infinite; /* The animation property */
+    animation: animate-text 75s linear infinite; /* The animation property */
 }
 .text span {
     margin: 5px
@@ -56,4 +58,22 @@
 .yellow-em {
     color: #ffbf29;
     font-weight: bold !important;
+}
+
+.problem {
+    background-color: #000000;
+    opacity: 1;
+    background-image:  radial-gradient(#656565 0.6000000000000001px, transparent 0.6000000000000001px), radial-gradient(#656565 0.6000000000000001px, #000000 0.6000000000000001px);
+    background-size: 24px 24px;
+    background-position: 0 0,12px 12px;
+    animation: pan-diagonally 180s linear infinite;
+}
+.problem p {
+    color: #ffffff;
+}
+.translucent-gray-background {
+    background-color: rgba(46, 51, 61, 0.85);
+}
+.opaque {
+    opacity: 100%;
 }
