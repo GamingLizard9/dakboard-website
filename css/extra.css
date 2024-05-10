@@ -17,7 +17,7 @@
 /* Animation for panning text */
 @keyframes animate_text {
     from {
-      transform: translate3d(-10%, 0, 0);
+      transform: translate3d(10%, 0, 0);
     }
     to {
       transform: translate3d(-110%, 0, 0);
@@ -33,7 +33,7 @@
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    animation: animate_text 60s linear infinite; /* The animation property */
+    animation: animate_text 75s linear infinite; /* The animation property */
 }
 .text span {
     margin: 5px
