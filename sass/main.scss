@@ -3,12 +3,16 @@ $red: #cd2355;
 $gaminglizard9-green: #41bd22;
 $dark-gray: #111111;
 $black: #000000;
+$purple: #cc00cc;
 
 // Load Bulma's base styles and themes (including the minireset)
 @use "bulma/sass" with (
     $family-primary: '"Inter", sans-serif',
     $primary: $red,
-    $success: $gaminglizard9-green
+    $danger: $purple,
+    $success: $gaminglizard9-green,
+    $box-background-color: $red,
+    $notification-radius: 0.75rem
 );
 
 // Get the font

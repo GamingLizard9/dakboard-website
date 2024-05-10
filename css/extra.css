@@ -1,17 +1,49 @@
 .hero-pattern {
     background-image: url("../images/hero-pattern-2.png");
     background-size: 10%;
-    animation: pan 180s linear infinite;
+    animation: pan-diagonally 180s linear infinite;
 }
 
-@keyframes pan {
+@keyframes pan-diagonally {
     0% {
-      background-position: 0px 0px;
+      background-position: 0% 0%;
     }
     100% {
         background-position: -100% 500%;
     }
 }
+
+
+/* Animation for panning text */
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+.scrolling-text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+.text {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: animate_text 10s linear infinite; /* The animation property */
+}
+.text span {
+    margin: 5px
+}
+.spacer {
+    margin: 180px;
+    color: #ffffff;
+}
+
+
 
 .hoverable-navbar-item:hover {
     background-color: #cd2356;
