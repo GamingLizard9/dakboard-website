@@ -20,7 +20,7 @@
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-120%, 0, 0);
     }
 }
 .scrolling-text {
@@ -33,7 +33,7 @@
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    animation: animate_text 10s linear infinite; /* The animation property */
+    animation: animate_text 75s linear infinite; /* The animation property */
 }
 .text span {
     margin: 5px
