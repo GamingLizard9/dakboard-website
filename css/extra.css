@@ -17,7 +17,7 @@
 /* Animation for panning text */
 @keyframes animate_text {
     from {
-      transform: translate3d(10%, 0, 0);
+      transform: translate3d(-10%, 0, 0);
     }
     to {
       transform: translate3d(-110%, 0, 0);
