@@ -1,15 +1,10 @@
-.hero-pattern {
-    background-image: url("../images/hero-pattern-2.png");
-    background-size: 10%;
-    animation: pan-diagonally 180s linear infinite;
-}
-
 /* prevent horizontal scrolling on the body */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
+/* Scrolling icons animations for hero and footer */
 @keyframes pan-diagonally {
     0% {
       background-position: 0% 0%;
@@ -17,6 +12,24 @@ html, body {
     100% {
         background-position: -100% 500%;
     }
+}
+@keyframes footer-anim {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+        background-position: -100% 1100%;
+    }
+}
+.hero-pattern {
+    background-image: url("../images/hero-pattern-2.png");
+    background-size: 10%;
+    animation: pan-diagonally 180s linear infinite;
+}
+.footer-pattern {
+    background-image: url("../images/hero-pattern-white.png");
+    background-size: 10%;
+    animation: footer-anim 180s linear infinite;
 }
 
 
@@ -82,4 +95,20 @@ html, body {
 }
 .opaque {
     opacity: 100%;
+}
+
+/* Styling rules for images */
+.rounded-corners {
+    border-radius: 10px;
+}
+.translucent {
+    opacity: 0.75;
+}
+.caption-container {
+    position: relative;
+}
+.caption {
+    position: absolute;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
 }
