@@ -4,6 +4,12 @@
     animation: pan-diagonally 180s linear infinite;
 }
 
+/* prevent horizontal scrolling on the body */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @keyframes pan-diagonally {
     0% {
       background-position: 0% 0%;
@@ -72,7 +78,7 @@
     color: #ffffff;
 }
 .translucent-gray-background {
-    background-color: rgba(46, 51, 61, 0.85);
+    background-color: rgba(46, 51, 61, 0.7);
 }
 .opaque {
     opacity: 100%;
