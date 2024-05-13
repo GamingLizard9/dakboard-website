@@ -30,6 +30,50 @@
         });
       
       });
+
+      // Modal code (from Bulma docs)
+            document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+            });
+        }
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+            $trigger.addEventListener('click', () => {
+            openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .message-header .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+            closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            if(event.key === "Escape") {
+            closeAllModals();
+            }
+        });
+        });
     </script>
   </head>
   <body>
@@ -100,14 +144,12 @@
                             <p class="title">What is a <span class="yellow-em">DAKboard</span>?</p>
                             <p>A <strong>DAKboard</strong> is a wall-mounted smart display with some unique features:</p>
                             <ul>
-                                <li><strong>Centralized calendar</strong>: You can add multiple calendar sources, so you can have your whole family's digital calendar in one place!*</li>
+                                <li><strong>Centralized calendar</strong>: You can add multiple calendar sources, so you can have your whole family's digital calendar in one place! <a class="js-modal-trigger" data-target="calendar-limitations-modal">*</a></li>
                                 <li><strong>Digital photo frame</strong>: All your favorite photos can be added through your cloud photo service, and they will rotate in the background.</li>
                                 <li><strong>Platform agnostic</strong>: DAKboard integrates with tens of services, allowing for a seamless experience no matter what you use.</li>
-                                <li><strong>Endlessly customizable</strong>: The entire layout can be customized, so you can have any look you'd like!**</li>
+                                <li><strong>Endlessly customizable</strong>: The entire layout can be customized, so you can have any look you'd like! <a class="js-modal-trigger" data-target="requires-subscription-modal">*</a></li>
                                 <li><strong>Open hardware</strong>: This DAKboard uses off-the-shelf components, so you can replace broken parts individually</li>
                             </ul>
-                            <p class="is-size-7">* You can only add two calendars on the free plan; I have no control over this. My suggestion: have your family put everything on one shared Google calendar so it only takes up one slot.</p>
-                            <p class="is-size-7">** requires a DAKboard Essentials subscription for $5 a month (if bought yearly). The cost of assembly and installation does not include this fee because I do not distribute the software. A 30-day trial is available.</p>
                         </div>
                     </div>
                 </div>
@@ -119,22 +161,6 @@
                 </div>
             </div>
         </div>
-        <!-- Soon to be a pop-up with * text
-        <div class="modal is-active">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-                <aticle class="message is-primary">
-                    <div class="message-header">
-                        <p>Calendar limitations</p>
-                        <button class="delete" aria-label="delete"></button>
-                    </div>
-                    <div class="message-body has-background-primary-soft">
-                        <p>You can only add two calendars on the free plan; I have no control over this.</p>
-                        <p>My suggestion: have your family put everything on one shared Google calendar so it only takes up one slot.</p>
-                    </div>
-                </article>
-            </div>
-          </div> -->
     </section>
 
     <br>
@@ -169,9 +195,9 @@
             </span>
             <span class="icon-text has-text-primary">
                 <span class="icon">
-                    <i class="fa-regular fa-calendar-days fa-sm"></i>
+                    <i class="fa-regular fa-newspaper fa-sm"></i>
                     </span>
-                    <span>date <span class="has-text-black"> and </span></span>
+                    <span>news <span class="has-text-black"> and </span></span>
             </span>
             <span class="icon-text has-text-link">
                 <span class="icon">
@@ -208,9 +234,9 @@
             </span>
             <span class="icon-text has-text-primary">
                 <span class="icon">
-                    <i class="fa-regular fa-calendar-days fa-sm"></i>
+                    <i class="fa-regular fa-newspaper fa-sm"></i>
                     </span>
-                    <span>date <span class="has-text-black"> and </span></span>
+                    <span>news <span class="has-text-black"> and </span></span>
             </span>
             <span class="icon-text has-text-link">
                 <span class="icon">
@@ -231,15 +257,10 @@
                                 <p class="title has-text-white">The problem</p>
                                 <p>Setting up a DAKboard is difficult and time-consuming.</p>
                                 <p>You have to know how to do technical tasks, like flash an image to an sd card.</p>
-                                <p>You can skip this by buying one directly from DAKboard, but those are very expensive!*</p>
+                                <p>You can skip this by buying one directly from DAKboard, but those are very expensive! <a class="js-modal-trigger" data-target="diy-modal">*</a></p>
                                 <p>Then you need to spend even more time to hook up all your accounts!</p>
                                 <p>And if something goes wrong, it can be very hard to fix!</p>
                                 <p>There has to be an easier way...</p>
-                                <p class="is-size-7">
-                                    * As of the time of this writing, the cheapest board DAKboard sells starts at $549, but there are other configurations which are even more expensive!
-                                    You can go cheaper by buying just the CPU (the small computer board that runs the display) and provide your own display, but that is pretty expensive too!
-                                    If you want to do this yourself, you can go <a href="https://shop.dakboard.com/">here</a>, but I wouldn't reccomend it if you're not very technical.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -272,7 +293,7 @@
 
     <p>Placeholder....</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <footer class="footer has-background-white-ter footer-pattern">
+    <footer class="footer has-background-white footer-pattern">
         <div class="content has-text-centered">
             <p class="has-text-black"><strong>
                 This website was made by <a href="https://gaminglizard9.github.io">Dawson Call</a>.
@@ -283,5 +304,62 @@
       </footer>
       <!-- Load Font Awesome icons -->
       <script src="https://kit.fontawesome.com/43e44da12d.js" crossorigin="anonymous"></script>
+
+      <!-- The various modals -->
+      <div class="modal" id="calendar-limitations-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <article class="message is-primary">
+                <div class="message-header has-background-primary">
+                    <p class="is-size-4">Calendar Limitations</p>
+                    <button class="js-modal-trigger delete" aria-label="close" data-target="calendar-limitations-modal"></button>
+                </div>
+                <div class="message-body has-background-primary-soft">
+                    <div class="content">
+                        <p>You can only add two calendars on the free plan; I have no control over this.</p>
+                        <p>My suggestion: have your family put everything on one shared Google calendar so it only takes up one slot.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+      </div>
+      <div class="modal" id="requires-subscription-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <article class="message is-primary">
+                <div class="message-header has-background-primary">
+                    <p class="is-size-4">Subscription Required</p>
+                    <button class="js-modal-trigger delete" aria-label="close" data-target="require-subscription-modal"></button>
+                </div>
+                <div class="message-body has-background-primary-soft">
+                    <div class="content">
+                        <p>This feature requires a DAKboard Essentials subscription for $5 a month (if bought yearly).</p> 
+                        <p>The cost of assembly and installation does not include this fee because I do not make the software.</p>
+                        <p>I would make it work without the subscription if I could, but it is what it is.</p> 
+                        <p>A 30-day trial is available.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+      </div>
+      <div class="modal" id="diy-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <article class="message is-primary">
+                <div class="message-header has-background-primary">
+                    <p class="is-size-4">Do-It-Yourself Assembly</p>
+                    <button class="js-modal-trigger delete" aria-label="close" data-target="diy-modal"></button>
+                </div>
+                <div class="message-body has-background-primary-soft">
+                    <div class="content">
+                        <p>As of the time of this writing, the cheapest board DAKboard sells starts at $549, but there are other configurations which are even more expensive!</p>
+                        <p>You can go cheaper by buying just the CPU (the small computer board that runs the display) and provide your own display, but that is pretty expensive too!</p>
+                        <p>If you want to do this yourself, you can go <a href="https://shop.dakboard.com/">here</a>, but I wouldn't reccomend it if you're not very technical.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+      </div>
+
   </body>
 </html>
