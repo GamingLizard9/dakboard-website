@@ -31,7 +31,9 @@
       
       });
 
-      // Modal code (from Bulma docs)
+        
+      
+        // Modal code (from Bulma docs)
             document.addEventListener('DOMContentLoaded', () => {
         // Functions to open and close a modal
         function openModal($el) {
@@ -59,7 +61,7 @@
         });
 
         // Add a click event on various child elements to close the parent modal
-        (document.querySelectorAll('.modal-background, .modal-close, .message-header .delete, .modal-card-foot .button') || []).forEach(($close) => {
+        (document.querySelectorAll('.modal-background, .modal-close, .message-header .delete, .modal-card-foot .button .proceed-button') || []).forEach(($close) => {
             const $target = $close.closest('.modal');
 
             $close.addEventListener('click', () => {
@@ -282,8 +284,18 @@
                 <div class="column">
                     <div class="notification is-primary">
                         <div class="content">
-                            <p class="title">The solution</p>
-                            <p>TBD...</p>
+                            <p class="title">The solution: <span class="yellow-em">Dawson's DAKboards!</span></p>
+                            <p>Through Dawson's DAKboards, I will set up your DAKboard <span class="yellow-em">for you</span>!</p>
+                            <p>This saves you from having to go through the technical parts of setting up a DAKboard.</p>
+                            <p class="subtitle"><strong class="has-text-white">Here's how it works:</strong></p>
+                            <ul>
+                                <li>First, you order the parts off of Amazon and have them shipped to your house.</li>
+                                <li>Then, we set up a date where I can come to your house and set it up!</li>
+                                <li>I set it up for you, getting the software installed on the cmputer board, and helping you link all your accounts!</li>
+                                <li>Finally, you pay, and that's it! You have a working DAKboard!</li>
+                            </ul>
+                            <p>Because I buy my own parts, paying for me to assemble you a DAKboard is quite a bit cheaper than buying one from them, even if you include labor.</p>
+                            <p>Plus, you get the luxury of having it set up for you!</p>
                         </div>
                     </div>
                 </div>
@@ -306,6 +318,23 @@
       <script src="https://kit.fontawesome.com/43e44da12d.js" crossorigin="anonymous"></script>
 
       <!-- The various modals -->
+      <div class="modal is-active" id="under-construction-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <article class="message is-primary">
+                <div class="message-header has-background-primary">
+                    <p class="is-size-4">Under Construction</p>
+                    <button class="js-modal-trigger delete" aria-label="close" data-target="under-construction-modal"></button>
+                </div>
+                <div class="message-body has-background-primary-soft">
+                    <div class="content">
+                        <p>This website is still being constructed.</p>
+                        <p>You are welcome to view it, but many things are unfinished, and all information is subject to change.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+      </div>
       <div class="modal" id="calendar-limitations-modal">
         <div class="modal-background"></div>
         <div class="modal-content">
