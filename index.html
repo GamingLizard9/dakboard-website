@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Dawson's DAKboards</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/extra.css">
 
@@ -82,7 +82,7 @@
     <nav class="navbar is-primary has-background-primary-50 is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand has-background-primary-40">
           <a class="navbar-item hoverable-navbar-item" href="./index.html">
-            <span class="yellow-em">LOGO COMING SOON</span>
+            <span class="yellow-em">DAWSON'S DAKBOARDS</span>
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -109,15 +109,19 @@
                 <a class="navbar-item hoverable-navbar-item" href="./pages/troubleshooting.html">
                     Troubleshooting
                 </a>
+                
+                <a class="navbar-item hoverable-navbar-item" href="./pages/faq.html">
+                    FAQ
+                </a>
             </div>
       
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-warning">
+                        <a class="button is-warning" href="#buy">
                             <strong>Order Now</strong>
                         </a>
-                        <a class="button is-primary">
+                        <a class="button is-primary" href="mailto:dawsoncall888+dakboards@gmail.com">
                             Contact
                         </a>
                     </div>
@@ -383,8 +387,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
-
+                <div class="column" id="buy">
+                    <div class="notification is-primary">
+                        <div class="content">
+                            <p class="title"><span class="yellow-em">Convinced?</span></p>
+                            <p>If you would like to purchase from Dawson's DAKboards, simply shoot me an email!</p>
+                            <p>We can get all the details worked out, and then I will send you the Amazon listings for all the products you need.</p>
+                            <p>You order them, and then we set up a time where I can set it up.</p>
+                            <p>If you have any questions, you can check the <a href="./pages/faq.html">FAQ</a>, If that doesn't help, you can contact me from the link above and I will answer them as soon as possible!</p>
+                            <p>If you want to contact me, please use the button below:</p>
+                        </div>
+                        <a class="button is-warning" href="mailto:dawsoncall888+dakboards@gmail.com">Order a DAKboard</a>
+                    </div>
+                    <br>
+                    <div class="notification is-primary">
+                        <div class="content">
+                            <p class="title">Having <span class="yellow-em">trouble</span>?</p>
+                            <p>If you're having trouble with something, you can contact me from the link above, or reference the troubleshooting guide below.</p>
+                            <p>This guide contains easy-to-follow instructions on how to fix common issues.</p>
+                            <p>You can access the trouble shooting guide with the button below:</p>
+                        </div>
+                        <a class="button is-warning" href="./pages/troubleshooting.html">Troubleshooting</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -404,25 +428,6 @@
       <script src="https://kit.fontawesome.com/43e44da12d.js" crossorigin="anonymous"></script>
 
       <!-- The various modals -->
-      <div class="modal is-active" id="under-construction-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="container is-fluid">
-                <article class="message is-primary">
-                    <div class="message-header has-background-primary">
-                        <p class="is-size-4">Under Construction</p>
-                        <button class="js-modal-trigger delete" aria-label="close" data-target="under-construction-modal"></button>
-                    </div>
-                    <div class="message-body has-background-primary-soft">
-                        <div class="content">
-                            <p>This website is still being constructed.</p>
-                            <p>You are welcome to view it, but many things are unfinished, and all information is subject to change.</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-      </div>
       <div class="modal" id="calendar-limitations-modal">
         <div class="modal-background"></div>
         <div class="modal-content">
