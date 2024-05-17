@@ -1,13 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top" data-theme="light" lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Troubleshooting</title>
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/extra.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+        </script>
     </head>
     <body>
-        <p class="title">This page is COMING SOON!</p>
+        <nav class="navbar is-primary has-background-primary-50 is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand has-background-primary-40">
+              <a class="navbar-item hoverable-navbar-item" href="./index.html">
+                <span class="yellow-em">DAWSON'S DAKBOARDS</span>
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu has-background-primary-40">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="https://gaminglizard9.github.io">
+                                <strong>Return to Personal Page</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item hoverable-navbar-item" href="../index.html">
+                        Home
+                    </a>
+          
+                    <a class="navbar-item hoverable-navbar-item" href="./pages/troubleshooting.html">
+                        Troubleshooting
+                    </a>
+                    
+                    <a class="navbar-item hoverable-navbar-item" href="./pages/faq.html">
+                        FAQ
+                    </a>
+                </div>
+          
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-warning" href="#buy">
+                                <strong>Order Now</strong>
+                            </a>
+                            <a class="button is-primary" href="mailto:dawsoncall888+dakboards@gmail.com">
+                                Contact
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero is-primary is-medium">
+            <div class="hero-body">
+                <p class="title is-size-1 is-size-2-mobile has-text-centered">Troubleshooting</p>
+            </div>
+        </div>
     </body>
 </html>
