@@ -1,13 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top" data-theme="light" lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Troubleshooting</title>
+        <title>FAQs</title>
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/extra.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+        </script>
     </head>
     <body>
-        <p class="title">This page is COMING SOON!</p>
+        <nav class="navbar is-primary has-background-primary-50 is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand has-background-primary-40">
+              <a class="navbar-item hoverable-navbar-item" href="../index.html">
+                <span class="yellow-em">DAWSON'S DAKBOARDS</span>
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu has-background-primary-40">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="https://gaminglizard9.github.io">
+                                <strong>Return to Personal Page</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item hoverable-navbar-item" href="../index.html">
+                        Home
+                    </a>
+          
+                    <a class="navbar-item hoverable-navbar-item" href="./troubleshooting.html">
+                        Troubleshooting
+                    </a>
+                    
+                    <a class="navbar-item hoverable-navbar-item" href="./faq.html">
+                        FAQ
+                    </a>
+                </div>
+          
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-warning" href="#buy">
+                                <strong>Order Now</strong>
+                            </a>
+                            <a class="button is-primary" href="mailto:dawsoncall888+dakboards@gmail.com">
+                                Contact
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero is-primary is-medium">
+            <div class="hero-body hero-pattern">
+                <p class="title is-size-1 is-size-2-mobile has-text-centered">Frequently Asked Questions</p>
+            </div>
+        </div>
+        <br>
+
+        <section class="main-content">
+            <div class="container is-fluid">
+                <div class="grid is-col-min-12">
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">How are you able to do this?</p>
+                                <p>The company that makes DAKboards allows you to load their software onto other devices so people could assemble their own DAKboards.</p>
+                                <p>Because this is a long process to set up, I have decided to offer it as a service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">Why shouldn't I buy from DAKboard?</p>
+                                <p>In short: It's significantly more expensive, and you have to do the work yourself.</p>
+                                <p>A DAKboard from them costs almost double what I charge for parts and installation ($550 vs. $300).</p>
+                                <p>You can buy just the computer board from them, but that costs over $100, and you still need to purchase a monitor!</p>
+                                <p>Finally, their microSD card costs $25, which I can reproduce for half that.</p>
+                                <p>So, buying from me is cheaper from buying from them, and I do the installation!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">How does making a purchase work?</p>
+                                <p>First, reach out to me. Then, I will send you some products to buy on Amazon, which you will have shipped to your house. </p>
+                                <p>Then, we arrange a time where I come to you and set it up.</p>
+                                <p>Because you bought the parts yourself, you only pay me for labor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">Is this a touchscreen?</p>
+                                <p>No. This display is meant to be controlled from your phone or computer, and it will automatically update from the apps on your device.</p>
+                                <p>There is some functionality that can be done from a touchscreen, such as rotate the photo or scroll the calendar. However, I wouldn't reccomend this for a couple of reasons:</p>
+                                <ol>
+                                    <li>The amount you can do with a touchscreen is very limited at this time.</li>
+                                    <li>Touchscreen monitors are more expensive, so it will add at least $100 to the overall cost.</li>
+                                    <li>Touchscreens don't work great with scheduling the board on/off, so if you have it turn off at night, it breaks the touchscreen.</li>
+                                </ol>
+                                <p>Because of this, I wouldn't reccomend getting a touchscreen, but if you do, I can set it up.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">How much does it cost?<p>
+                                    <p>The parts on Amazon flucuate in price, but are generaly betwee $150-$200.</p>
+                                    <p>How much is charged for labor depends on how long it takes me to set it up.</p>
+                                    <p>You can expect to pay $100 for setup if it takes less than 1.5 hours, and $50 for each additional hour.</p>
+                                    <p>The $300 figure on the front page is an estimate which is subject to change.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">Why do some features require a subscription?<p>
+                                <p>I am not the company who makes the software.</p>
+                                <p>The company who makes the software charges a subscription fee for some features in order to cover the costs of servers to keep the software running.</p>
+                                <p>If I had control over this, there would not be a subscription, but it is what it is.</p>
+                                <p>Do not let this dissuade you from making a purchase; most features can still be accessed without one.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">What do I get with a subscription?<p>
+                                <p>If you pay their subscription, the main feature is <strong>custom layouts</strong>.</p>
+                                <p>These allow you to choose exactly what appears on your screen, and exactly where it is.</p>
+                                <p>You can do some customizing on the free plan, but paying for a subscription is a lot less limiting.</p>
+                                <p>It also allows you to load 5 calendars instead of 2, and access to additional integrations.</p>
+                                <p>You can compare the plans <a href="https://dakboard.com/pricing">here</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">How much does a subscription cost?<p>
+                                <p>The "Essentials" plan costs $6 a month ($5 if billed yearly).</p>
+                                <p>The "Plus" plan costs $10 a month ($8 if billed yearly). I would not reccomend purchasing this plan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">What calendar apps are supported?<p>
+                                <p>DAKboard supports Google Calendar and Microsoft Calendar directly. This means you can simply log into your account and add the calendar without any additional trouble.</p>
+                                <p>They also support any calendar that supports .ics links (which is almost all of them!)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">What photo apps are supported?<p>
+                                <p>The DAKboard software allows you to load background photos from the following sources:</p>
+                                <ul>
+                                    <li>iCloud Photos</li>
+                                    <li>Flickr</li>
+                                    <li>Google Photos</li>
+                                    <li>Google Drive</li>
+                                    <li>Dropbox</li>
+                                    <li>OneDrive</li>
+                                    <li>Image URL</li>
+                                </ul>
+                                <p>You can also have it load the Bing daily image, or a random landscape picture.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">What to-do apps are supported?<p>
+                                <p>Currently, DAKboard supports Todoist, Google Tasks, and Microsoft To-Do.</p>
+                                <p>DAkboard also has their own to-do list function which requires a subscription.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="notification is-primary">
+                            <div class="content">
+                                <p class="title is-size-4">Could I use different parts if I wanted to?<p>
+                                <p>Certainly! If you want to buy more or less expensive parts, go ahead!</p>
+                                <p>If you would like to buy a different monitor, make sure it is IPS. Otherwise, it will not look good at an angle!</p>
+                                <p>If you are buying a more expensive monitor, look into a 1440p or 4k monitor, or maybe one of a larger size!</p>
+                                <p>However, buying a more powerful Raspberry Pi computer board will make little to no difference. I would not reccomend buying a cheaper one.</p>
+                                <p>Remember, if you wanted to, you could always replace just the monitor later!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <footer class="footer has-background-white footer-pattern" style="border-top: 3px solid black">
+            <div class="content has-text-centered">
+                <p class="has-text-black"><strong>
+                    This website was made by <a href="https://gaminglizard9.github.io">Dawson Call</a>.
+                    The source code can be viewed on 
+                    <a href="https://github.com/gaminglizard9/dakboards">Github</a>.
+                    This page was last updated on 19 May 2024.
+                </strong></p>
+            </div>
+          </footer>
+        <!-- Load Font Awesome icons-->
+        <script src="https://kit.fontawesome.com/43e44da12d.js" crossorigin="anonymous"></script>
     </body>
 </html>
