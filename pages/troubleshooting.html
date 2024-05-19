@@ -83,52 +83,50 @@ $navbarBurgers.forEach( el => {
         </nav>
 
         <div class="hero is-primary is-medium">
-            <div class="hero-body">
+            <div class="hero-body hero-pattern">
                 <p class="title is-size-1 is-size-2-mobile has-text-centered">Troubleshooting</p>
             </div>
         </div>
         <br>
-        <section class="help">
+
+        <section class="main-content">
             <div class="container is-fluid">
                 <div class="columns">
-                    <div class="column is-one-quarter">
+                    <div class="column">
                         <div class="notification is-primary">
-                            <p class="title">Jump to a specific issue</p>
-                            <ul>
-                                <li><a href="#wifi-disconnected"><span class="icon"><i class="fa-solid fa-wifi"></i></span>Wi-Fi Disconnected</li></a>
-                            </ul>
+                            <div class="content">
+                                <p class="title"><span class="yellow-em">Troubleshooting </span>guide</p>
+                                <p>Below, you can access the troubleshooting guide, which contains instructions on how to fix many common problems.</p>
+                                <p>Click the button to open it:</p>
+                                <a class="button is-warning" href="https://dawsons-dakboards.notion.site/Dawson-s-DAKboards-Troubleshooting-d42f0fd659d44128b1193cb9a0be62ba?pvs=25">Open troubleshooting guide</a>
+                            </div>
                         </div>
                     </div>
                     <div class="column">
-                        <div class="notification is-primary" id="intro">
+                        <div class="notification is-primary">
                             <div class="content">
-                                <p class="title">Welcome to the Troubleshooting page?</p>
-                                <p>Here, there are steps in order to solve common issues.</p>
-                                <p>Please try following these steps to fix your issues before contacting me.</p>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="notification is-primary" id="wifi-disconnected">
-                            <div class="content">
-                                <p class="title">No Wi-Fi connection</p>
-                                <p>If your DAKboard has disconnected from your wifi, you can easily restore it using another device.</p>
-                                <p>First, log in to the <a href="https://dakboard.com/site#login">DAKboard web portal</a> using your username and password.</p>
-                                <img src="../images/troubleshooting/login-page.png" width=40% alt="The DAKboard home page, with the 'login' button circled in red.">
-                                <p>After you login, go to <span class="yellow-em">displays and devices</span> in the sidebar. Then, click the three-dot menu next to your device and select <span class="yellow-em">Settings</span>.</p>
-                                <img src="../images/troubleshooting/device-settings.png" width=40% alt="The DAKboard website, with the 'Displays and Devices' tab in the side bar selected. The three-dot menu for 'kitchen' is open.">
-                                <p>Then, a page with settings will open up. Click <span class="yellow-em">View Device Settings</span>, and a new tab will open.</p>
-                                <img src="../images/troubleshooting/open-device-settings.png" width=40% alt="A menu for changing settings on the DAKboard. The option 'View Device Settings' is circled.">
-                                <p>This new page will have wi-fi options on it. Select the network name from the dropdown, and enter your password in the "password" field. Leave the securiry field at the default.</p>
-                                <img src="../images/troubleshooting/wifi-settings.png" width=40%  alt="A menu to change Wi-Fi settings on a DAKboard.">
-                                <p>Finally, scroll down to the bottom of the page and click the orange <span class="yellow-em">Save Changes</span> button.</p>
+                                <p class="title">Still having <span class="yellow-em">trouble</span>?</p>
+                                <p>If you need additional help, feel free to contact me!</p>
+                                <p>If it's a simple problem, I will try my best to help you, but if I need to come to your location to fix it, it may be an additional fee.</p>
+                                <a class="button is-warning" href="mailto:dawsoncall888+dakboards@gmail.com">Contact me</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
+        <br>
 
+        <footer class="footer has-background-white footer-pattern" style="border-top: 3px solid black">
+            <div class="content has-text-centered">
+                <p class="has-text-black"><strong>
+                    This website was made by <a href="https://gaminglizard9.github.io">Dawson Call</a>.
+                    The source code can be viewed on 
+                    <a href="https://github.com/gaminglizard9/dakboards">Github</a>.
+                    This page was last updated on 19 May 2024.
+                </strong></p>
+            </div>
+          </footer>
         <!-- Load Font Awesome icons-->
         <script src="https://kit.fontawesome.com/43e44da12d.js" crossorigin="anonymous"></script>
     </body>
